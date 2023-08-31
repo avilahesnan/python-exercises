@@ -1,30 +1,30 @@
-class Pessoa:
-    def __init__(self, nome, idade, altura):
-        self.__nome = nome
-        self.__idade = idade
-        self.__altura = altura
+class Person:
+    def __init__(self, name, age, height):
+        self.__name = name
+        self.__age = age
+        self.__height = height
 
-    def get_nome(self):
-        return self.__nome
+    def get_name(self):
+        return self.__name
 
-    def set_nome(self, value):
-        self.__nome = value
+    def set_name(self, value):
+        self.__name = value
 
-    def get_idade(self):
-        return self.__idade
+    def get_age(self):
+        return self.__age
 
-    def set_idade(self, value):
-        self.__idade = value
+    def set_age(self, value):
+        self.__age = value
 
-    def get_altura(self):
-        return self.__altura
+    def get_height(self):
+        return self.__height
 
-    def set_altura(self, value):
-        self.__altura = value
+    def set_height(self, value):
+        self.__height = value
 
-    def dados(self):
-        print(f'{self.__nome} com {self.__idade} anos e {self.__altura}cm de altura')
+    def data(self):
+        print(f'{self.__name} com {self.__age} anos e {self.__height}cm de altura')
 
 
-pessoa1 = Pessoa('Hesnan', 23, 175)
-pessoa1.dados()
+pessoa1 = Person('Hesnan', 23, 175)
+pessoa1.data()
