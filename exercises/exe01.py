@@ -1,30 +1,31 @@
-class Person:
-    def __init__(self, name, age, height):
-        self.__name = name
-        self.__age = age
-        self.__height = height
-
-    def get_name(self):
-        return self.__name
-
-    def set_name(self, value):
-        self.__name = value
-
-    def get_age(self):
-        return self.__age
-
-    def set_age(self, value):
-        self.__age = value
-
-    def get_height(self):
-        return self.__height
-
-    def set_height(self, value):
-        self.__height = value
-
-    def data(self):
-        print(f'{self.__name} com {self.__age} anos e {self.__height}cm de altura')
+from passlib.hash import pbkdf2_sha256 as cryp
 
 
-pessoa1 = Person('Hesnan', 23, 175)
-pessoa1.data()
+class User:
+
+    def __init__(self, first_name, last_name, email, password):
+        self.__first_name = first_name
+        self.__last_name = last_name
+        self.__email = email
+        self.__password = cryp.hash(password, rounds=200000, salt_size=16)
+
+    def check_password(self, password):
+        if cryp.verify(password, self.__password):
+            return True
+        return False
+
+
+first_name = str(input('Seu primeiro nome: '))
+last_name = str(input('Seu sobrenome: '))
+email = str(input('E-mail: '))
+password = str(input('Senha: '))
+
+user1 = User(first_name, last_name, email, password)
+print('Usuário criado com sucesso!')
+
+password = str(input('Senha: '))
+
+if user1.check_password(password):
+    print('Acesso permitido')
+
+# print(f'Senha criptografada: {user1._User__password}')
