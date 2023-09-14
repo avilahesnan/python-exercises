@@ -3,8 +3,8 @@ from passlib.hash import pbkdf2_sha256 as cryp
 
 class User:
 
-    def __init__(self, first_name, last_name, email, password):
-        self.__first_name = first_name
+    def __init__(self, name, last_name, email, password):
+        self.__name = name
         self.__last_name = last_name
         self.__email = email
         self.__password = cryp.hash(password, rounds=200000, salt_size=16)
@@ -15,12 +15,12 @@ class User:
         return False
 
 
-first_name = str(input('Seu primeiro nome: '))
+name = str(input('Seu primeiro nome: '))
 last_name = str(input('Seu sobrenome: '))
 email = str(input('E-mail: '))
 password = str(input('Senha: '))
 
-user1 = User(first_name, last_name, email, password)
+user1 = User(name, last_name, email, password)
 print('Usuário criado com sucesso!')
 
 password = str(input('Senha: '))
