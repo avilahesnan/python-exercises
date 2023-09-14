@@ -5,26 +5,32 @@ class Person:
         self.__age = age
         self.__height = height
 
-    def get_name(self):
+    @property
+    def name(self):
         return self.__name
 
-    def set_name(self, value):
-        self.__name = value
+    @property
+    def age(self):
+        return self.__age
 
-    def get_age(self):
-        return self.__name
-
-    def set_age(self, value):
-        self.__age = value
-
-    def get_height(self):
+    @property
+    def height(self):
         return self.__height
 
-    def set_height(self, value):
-        self.__height = value
+    @name.setter
+    def name(self, new_name):
+        self.__name = new_name
+
+    @age.setter
+    def age(self, new_age):
+        self.__age = new_age
+
+    @height.setter
+    def height(self, new_height):
+        self.__height = new_height
 
     def print_person(self):
-        print(f'{self.__name} tem {self.__age} anos e altura {self.__height}cm')
+        print(f'{self.name} tem {self.age} anos e altura {self.height}cm')
 
 
 user1 = Person('Hesnan', 23, 175)

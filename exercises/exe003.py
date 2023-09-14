@@ -28,20 +28,44 @@ class Diary:
         self.__age = age
         self.__height = height
 
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def age(self):
+        return self.__age
+
+    @property
+    def height(self):
+        return self.__height
+
+    @name.setter
+    def name(self, new_name):
+        self.__name = new_name
+
+    @age.setter
+    def age(self, new_age):
+        self.__age = new_age
+
+    @height.setter
+    def height(self, new_height):
+        self.__height = new_height
+
     def store_person(self):
         if len(Diary.list_store) < 10:
-            Diary.list_store.append([self.__name, self.__age, self.__height])
-            return print(f'{self.__name} foi adicionado com sucesso!')
+            Diary.list_store.append([self.name, self.age, self.height])
+            return print(f'{self.name} foi adicionado com sucesso!')
 
 
-user1 = Diary('hesnan', 23, 175)
-user2 = Diary('elon', 25, 171)
-user3 = Diary('werik', 22, 180)
+user1 = Diary('Hesnan', 23, 175)
+user2 = Diary('Fabrício', 25, 171)
+user3 = Diary('Werik', 22, 180)
 user1.store_person()
 user2.store_person()
 user3.store_person()
 
 print(Diary.print_diary())
 print(user1.print_person(0))
-print(user1.search_person('elon'))
-print(user1.remove_person('werik'))
+print(user1.search_person('Fabrício'))
+print(user1.remove_person('Werik'))

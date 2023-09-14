@@ -9,8 +9,40 @@ class User:
         self.__email = email
         self.__password = cryp.hash(password, rounds=200000, salt_size=16)
 
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def last_name(self):
+        return self.__last_name
+
+    @property
+    def email(self):
+        return self.__email
+
+    @property
+    def password(self):
+        return self.__password
+
+    @name.setter
+    def name(self, new_name):
+        self.__name = new_name
+
+    @last_name.setter
+    def last_name(self, new_last_name):
+        self.__last_name = new_last_name
+
+    @email.setter
+    def email(self, new_email):
+        self.__email = new_email
+
+    @password.setter
+    def password(self, new_password):
+        self.__password = cryp.hash(new_password, rounds=200000, salt_size=16)
+
     def check_password(self, password):
-        if cryp.verify(password, self.__password):
+        if cryp.verify(password, self.password):
             return True
         return False
 

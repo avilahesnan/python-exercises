@@ -6,53 +6,65 @@ class Lift:
         self.__capacity = capacity
         self.__quantity_people = 0
 
-    def get_current_floor(self):
+    @property
+    def current_floor(self):
         return self.__current_floor
 
-    def set_current_floor(self, value):
-        self.__current_floor = value
-
-    def get_stories(self):
+    @property
+    def stories(self):
         return self.__stories
 
-    def set_stories(self, value):
-        self.__stories = value
-
-    def get_capacity(self):
+    @property
+    def capacity(self):
         return self.__capacity
 
-    def set_capacity(self, value):
-        self.__capacity = value
-
-    def get_quantity_people(self):
+    @property
+    def quantity_people(self):
         return self.__quantity_people
 
-    def set_quantity_people(self, value):
-        self.__quantity_people = value
+    @current_floor.setter
+    def current_floor(self, new_current_floor):
+        self.__current_floor = new_current_floor
+
+    @stories.setter
+    def stories(self, new_stories):
+        self.__stories = new_stories
+
+    @capacity.setter
+    def capacity(self, new_capacity):
+        self.__capacity = new_capacity
+
+    @quantity_people.setter
+    def quantity_people(self, new_quantity_people):
+        self.__quantity_people = new_quantity_people
 
     def enter_lift(self):
-        if self.__quantity_people < self.__capacity:
-            self.__quantity_people += 1
+        if self.quantity_people < self.capacity:
+            self.quantity_people += 1
             return print('Entrou!')
-        return print(f'O elevador tem {self.__capacity} pessoas, está cheio')
+        return print(f'O elevador tem {self.capacity} pessoas, está cheio')
 
     def exit_lift(self):
-        if self.__quantity_people > 0:
-            self.__quantity_people -= 1
+        if self.quantity_people > 0:
+            self.quantity_people -= 1
             return print('Saiu!')
         return print('Não tem ninguém no elevador')
 
     def up_lift(self):
-        if self.__current_floor < self.__stories:
-            self.__current_floor += 1
-            return print('Subindo...')
-        return print(f'Estamos no {self.__stories}º andar, o último')
+        if self.quantity_people > 0:
+            if self.current_floor < self.stories:
+                self.current_floor += 1
+                return print('Subindo...')
+            return print(f'Estamos no {self.stories}º andar, o último')
+        return print('É preciso ter pessoas dentro do elevador para utiliza-lo')
 
     def down_lift(self):
-        if self.__current_floor > 0:
-            self.__current_floor -= 1
-            return print('Descendo...')
-        return print('Estamos no térreo')
+        if self.quantity_people > 0:
+            if self.current_floor > 0:
+                self.current_floor -= 1
+                return print('Descendo...')
+            return print('Estamos no térreo')
+        return print('É preciso ter pessoas dentro do elevador para utiliza-lo')
 
 
 lift = Lift(2, 3)

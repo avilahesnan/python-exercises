@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d5ec6281-49ad-4eaa-811c-2800997bf842" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exe002.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exe002.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exe003.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exe003.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/exercises/exe004.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exe004.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +58,7 @@
       <recent name="C:\Users\avila\PycharmProjects\pythonExercicios\venv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.exe004">
+  <component name="RunManager" selected="Python.exe002">
     <configuration name="esfera" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonExercicios" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,9 +166,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exe004" />
-        <item itemvalue="Python.exe003" />
         <item itemvalue="Python.exe002" />
+        <item itemvalue="Python.exe003" />
+        <item itemvalue="Python.exe004" />
         <item itemvalue="Python.exe001" />
         <item itemvalue="Python.esfera" />
       </list>
