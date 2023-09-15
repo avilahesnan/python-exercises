@@ -65,6 +65,3 @@ class Lift:
                 return print('Descendo...')
             return print('Estamos no térreo')
         return print('É preciso ter pessoas dentro do elevador para utiliza-lo')
-
-
-lift = Lift(2, 3)

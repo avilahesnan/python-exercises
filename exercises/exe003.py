@@ -56,16 +56,3 @@ class Diary:
         if len(Diary.list_store) < 10:
             Diary.list_store.append([self.name, self.age, self.height])
             return print(f'{self.name} foi adicionado com sucesso!')
-
-
-user1 = Diary('Hesnan', 23, 175)
-user2 = Diary('Fabrício', 25, 171)
-user3 = Diary('Werik', 22, 180)
-user1.store_person()
-user2.store_person()
-user3.store_person()
-
-print(Diary.print_diary())
-print(user1.print_person(0))
-print(user1.search_person('Fabrício'))
-print(user1.remove_person('Werik'))

@@ -31,7 +31,3 @@ class Person:
 
     def print_person(self):
         print(f'{self.name} tem {self.age} anos e altura {self.height}cm')
-
-
-user1 = Person('Hesnan', 23, 175)
-user1.print_person()
