@@ -58,7 +58,7 @@ class Motorbike:
 
     def print_motorbike(self):
         return print(f'Marca: {self.brand}; Modelo: {self.model}; Cor: {self.color}; Marcha Atual: {self.gear};'
-                     f'Marcha Máxima: {self.gear_max}; Ligada: {self.on}')
+                     f' Marcha Máxima: {self.gear_max}; Ligada: {self.on}')
 
     def gear_up(self):
         if self.on:
