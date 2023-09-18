@@ -37,7 +37,7 @@ class Microwave:
     def btn_door(self):
         if not self.closed:
             self.closed = True
-            return print('A porta fechou!')
+            return print('A porta está fechada!')
         else:
             self.closed = False
-            return print('A porta Abriu!')
+            return print('A porta está aberta!')
