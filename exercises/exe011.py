@@ -14,10 +14,10 @@ class HomeAppliance:
     def btn_on(self):
         if not self.on:
             self.on = True
-            return print('Ligando...')
+            return 'Ligando...'
         else:
             self.on = False
-            return print('Desligando...')
+            return 'Desligando...'
 
     def print_home_appliance(self):
-        return print(f'Ligado: {self.on}')
+        return f'Ligado: {self.on}'

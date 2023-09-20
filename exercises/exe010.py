@@ -57,27 +57,27 @@ class Motorbike:
         self.__on = new_on
 
     def print_motorbike(self):
-        return print(f'Marca: {self.brand}; Modelo: {self.model}; Cor: {self.color}; Marcha Atual: {self.gear};'
-                     f' Marcha Máxima: {self.gear_max}; Ligada: {self.on}')
+        return (f'Marca: {self.brand}; Modelo: {self.model}; Cor: {self.color}; Marcha Atual: {self.gear};'
+                f' Marcha Máxima: {self.gear_max}; Ligada: {self.on}')
 
     def gear_up(self):
         if self.on:
             if self.gear < self.gear_max:
                 self.gear += 1
-                return print('Proxima marcha')
-        return print('A moto precisa está ligada para subir de marcha!')
+                return 'Proxima marcha'
+        return 'A moto precisa está ligada para subir de marcha!'
 
     def gear_down(self):
         if self.on:
             if self.gear > 0:
                 self.gear -= 1
-                return print('Voltar uma marcha')
-        return print('A moto precisa está ligada para descer de marcha!')
+                return 'Voltar uma marcha'
+        return 'A moto precisa está ligada para descer de marcha!'
 
     def btn_on(self):
         if not self.on:
             self.on = True
-            return print('Ligando...')
+            return 'Ligando...'
         else:
             self.on = False
-            return print('Desligando')
+            return 'Desligando...'

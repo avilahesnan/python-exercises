@@ -47,4 +47,4 @@ class Rectangle:
         return self.__perimeter
 
     def print_rectangle(self):
-        print(f'Comprimento: {self.length}; Largura: {self.width}; Área: {self.area}; Perímetro: {self.perimeter}')
+        return f'Comprimento: {self.length}; Largura: {self.width}; Área: {self.area}; Perímetro: {self.perimeter}'

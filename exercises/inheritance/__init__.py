@@ -21,7 +21,7 @@ class Equipment:
         self.__model = new_model
 
     def print_device(self):
-        return print(f'Marca: {self.brand}; Modelo: {self.model}')
+        return f'Marca: {self.brand}; Modelo: {self.model}'
 
 
 class Computer(Equipment):
@@ -64,7 +64,7 @@ class Computer(Equipment):
         self.__system = new_system
 
     def print_device(self):
-        return print(f'Marca:{self.brand}; Modelo:{self.model}; Processador:{self.processor}; Sistema:{self.system}')
+        return f'Marca:{self.brand}; Modelo:{self.model}; Processador:{self.processor}; Sistema:{self.system}'
 
 
 class TestEquipment:

@@ -21,23 +21,23 @@ class Microwave:
         self.__closed = new_closed
 
     def print_microwave(self):
-        return print(f'Ligado: {self.on}; Fechado: {self.closed}')
+        return f'Ligado: {self.on}; Fechado: {self.closed}'
 
     def btn_on(self):
         if self.closed:
             if not self.on:
                 self.on = True
-                return print('Ligado')
+                return 'Ligado'
             else:
                 self.on = False
-                return print('Cancelado')
+                return 'Cancelado'
         else:
-            return print('A porta precisa está fechada!')
+            return 'A porta precisa está fechada!'
 
     def btn_door(self):
         if not self.closed:
             self.closed = True
-            return print('A porta está fechada!')
+            return 'A porta está fechada!'
         else:
             self.closed = False
-            return print('A porta está aberta!')
+            return 'A porta está aberta!'

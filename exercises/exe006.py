@@ -26,4 +26,4 @@ class Person:
         self.__address = new_address
 
     def print_person(self):
-        return print(f'Nome: {self.name}; Endereço: {self.address}; Telefone: {self.phone}')
+        return f'Nome: {self.name}; Endereço: {self.address}; Telefone: {self.phone}'

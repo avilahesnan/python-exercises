@@ -41,4 +41,4 @@ class Circle:
         return self.__perimeter
 
     def print_circle(self):
-        print(f'Raio: {self.radius}; Área: {self.area}; Perímetro: {self.perimeter}')
+        return f'Raio: {self.radius}; Área: {self.area}; Perímetro: {self.perimeter}'

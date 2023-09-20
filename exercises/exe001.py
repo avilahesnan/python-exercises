@@ -47,17 +47,17 @@ class User:
         return False
 
 
-name = str(input('Seu primeiro nome: '))
-last_name = str(input('Seu sobrenome: '))
-email = str(input('E-mail: '))
-password = str(input('Senha: '))
+nome = str(input('Seu primeiro nome: '))
+sobrenome = str(input('Seu sobrenome: '))
+e_mail = str(input('E-mail: '))
+senha = str(input('Senha: '))
 
-user1 = User(name, last_name, email, password)
+user1 = User(nome, sobrenome, e_mail, senha)
 print('Usuário criado com sucesso!')
 
-password = str(input('Senha: '))
+senha = str(input('Senha: '))
 
-if user1.check_password(password):
+if user1.check_password(senha):
     print('Acesso permitido')
 
 # print(f'Senha criptografada: {user1._User__password}')

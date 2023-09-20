@@ -38,4 +38,4 @@ class Square:
         return self.__perimeter
 
     def print_square(self):
-        return print(f'O quadrado de lado {self.side} tem área de {self.area} e perímetro de {self.perimeter}')
+        return f'O quadrado de lado {self.side} tem área de {self.area} e perímetro de {self.perimeter}'

@@ -55,4 +55,4 @@ class Diary:
     def store_person(self):
         if len(Diary.list_store) < 10:
             Diary.list_store.append([self.name, self.age, self.height])
-            return print(f'{self.name} foi adicionado com sucesso!')
+            return f'{self.name} foi adicionado com sucesso!'

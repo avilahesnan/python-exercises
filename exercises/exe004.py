@@ -41,27 +41,27 @@ class Lift:
     def enter_lift(self):
         if self.quantity_people < self.capacity:
             self.quantity_people += 1
-            return print('Entrou!')
-        return print(f'O elevador tem {self.capacity} pessoas, está cheio')
+            return 'Entrou!'
+        return f'O elevador tem {self.capacity} pessoas, está cheio'
 
     def exit_lift(self):
         if self.quantity_people > 0:
             self.quantity_people -= 1
-            return print('Saiu!')
-        return print('Não tem ninguém no elevador')
+            return 'Saiu!'
+        return 'Não tem ninguém no elevador'
 
     def up_lift(self):
         if self.quantity_people > 0:
             if self.current_floor < self.stories:
                 self.current_floor += 1
-                return print('Subindo...')
-            return print(f'Estamos no {self.stories}º andar, o último')
-        return print('É preciso ter pessoas dentro do elevador para utiliza-lo')
+                return 'Subindo...'
+            return f'Estamos no {self.stories}º andar, o último'
+        return 'É preciso ter pessoas dentro do elevador para utiliza-lo'
 
     def down_lift(self):
         if self.quantity_people > 0:
             if self.current_floor > 0:
                 self.current_floor -= 1
-                return print('Descendo...')
-            return print('Estamos no térreo')
-        return print('É preciso ter pessoas dentro do elevador para utiliza-lo')
+                return 'Descendo...'
+            return 'Estamos no térreo'
+        return 'É preciso ter pessoas dentro do elevador para utiliza-lo'

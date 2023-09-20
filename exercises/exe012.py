@@ -48,49 +48,49 @@ class Television:
         self.__on = new_on
 
     def print_tv(self):
-        return print(f'Ligada: {self.on}; Total de Canais: {self.channel_max}; Canal Atual: {self.channel};'
-                     f' Volume Máximo: {self.volume_max}; Volume Atual: {self.volume}')
+        return (f'Ligada: {self.on}; Total de Canais: {self.channel_max}; Canal Atual: {self.channel};'
+                f' Volume Máximo: {self.volume_max}; Volume Atual: {self.volume}')
 
     def btn_on(self):
         if not self.on:
             self.on = True
-            return print('Ligando...')
+            return 'Ligando...'
         else:
             self.on = False
-            return print('Desligando...')
+            return 'Desligando...'
 
     def volume_up(self):
         if self.on:
             if self.volume < self.volume_max:
                 self.volume += 1
-                return print(f'Volume: {self.volume}')
-            return print(f'Volume: {self.volume}')
-        return print('O televisor está desligado')
+                return f'Volume: {self.volume}'
+            return f'Volume: {self.volume}'
+        return 'O televisor está desligado'
 
     def volume_down(self):
         if self.on:
             if self.volume > 0:
                 self.volume -= 1
-                return print(f'Volume: {self.volume}')
-            return print(f'Volume: {self.volume}')
-        return print('O televisor está desligado')
+                return f'Volume: {self.volume}'
+            return f'Volume: {self.volume}'
+        return 'O televisor está desligado'
 
     def channel_next(self):
         if self.on:
             if self.channel < self.channel_max:
                 self.channel += 1
-                return print(f'Canal: {self.channel}')
+                return f'Canal: {self.channel}'
             else:
                 self.channel = 1
-                return print(f'Canal: {self.channel}')
-        return print('O televisor está desligado')
+                return f'Canal: {self.channel}'
+        return 'O televisor está desligado'
 
     def channel_previous(self):
         if self.on:
             if self.channel > 1:
                 self.channel -= 1
-                return print(f'Canal: {self.channel}')
+                return f'Canal: {self.channel}'
             else:
                 self.channel = self.channel_max
-                return print(f'Canal: {self.channel}')
-        return print('O televisor está desligado')
+                return f'Canal: {self.channel}'
+        return 'O televisor está desligado'

@@ -30,4 +30,4 @@ class Person:
         self.__height = new_height
 
     def print_person(self):
-        print(f'{self.name} tem {self.age} anos e altura {self.height}cm')
+        return f'{self.name} tem {self.age} anos e altura {self.height}cm'
