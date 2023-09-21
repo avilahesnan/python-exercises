@@ -1,29 +1,29 @@
 class Microwave:
 
-    def __init__(self):
-        self.__on = False
-        self.__closed = True
+    def __init__(self) -> None:
+        self.__on: bool = False
+        self.__closed: bool = True
 
     @property
-    def on(self):
+    def on(self) -> bool:
         return self.__on
 
-    @property
-    def closed(self):
-        return self.__closed
-
     @on.setter
-    def on(self, new_on):
+    def on(self, new_on: bool) -> None:
         self.__on = new_on
 
+    @property
+    def closed(self) -> bool:
+        return self.__closed
+
     @closed.setter
-    def closed(self, new_closed):
+    def closed(self, new_closed: bool) -> None:
         self.__closed = new_closed
 
-    def print_microwave(self):
+    def print_microwave(self) -> str:
         return f'Ligado: {self.on}; Fechado: {self.closed}'
 
-    def btn_on(self):
+    def btn_on(self) -> str:
         if self.closed:
             if not self.on:
                 self.on = True
@@ -34,7 +34,7 @@ class Microwave:
         else:
             return 'A porta precisa está fechada!'
 
-    def btn_door(self):
+    def btn_door(self) -> str:
         if not self.closed:
             self.closed = True
             return 'A porta está fechada!'

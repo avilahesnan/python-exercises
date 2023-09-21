@@ -1,29 +1,33 @@
 class Person:
 
-    def __init__(self, name, address, phone):
-        self.__name = name
-        self.__address = address
-        self.__phone = phone
+    def __init__(self, name: str, address: str, phone: str) -> None:
+        self.__name: str = name
+        self.__address: str = address
+        self.__phone: str = phone
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.__name
 
-    @property
-    def address(self):
-        return self.__address
-
-    @property
-    def phone(self):
-        return self.__phone
-
     @name.setter
-    def name(self, new_name):
+    def name(self, new_name: str) -> None:
         self.__name = new_name
 
+    @property
+    def address(self) -> str:
+        return self.__address
+
     @address.setter
-    def address(self, new_address):
+    def address(self, new_address: str) -> None:
         self.__address = new_address
 
-    def print_person(self):
+    @property
+    def phone(self) -> str:
+        return self.__phone
+
+    @phone.setter
+    def phone(self, new_phone: str) -> None:
+        self.__phone = new_phone
+
+    def print_person(self) -> str:
         return f'Nome: {self.name}; Endereço: {self.address}; Telefone: {self.phone}'
